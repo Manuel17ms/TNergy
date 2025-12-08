@@ -47,7 +47,14 @@
         <label>Località</label>
         <select v-model="store.form.locationId" required>
           <option value="">-- Seleziona --</option>
-          <option v-for="loc in store.locations" :key="loc.id" :value="loc.id">{{ loc.name }}</option>
+          <option
+  v-for="loc in store.locations"
+  :key="loc.id"
+  :value="loc.id"
+>
+  {{ loc.name }}
+</option>
+
         </select>
       </div>
 
