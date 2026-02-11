@@ -22,7 +22,10 @@ connectDB(uri)
 
 // Rotte esistenti
 app.use('/api', simulationRoutes);
-app.use('/api/localita', require('./routes/localita'));
+const localitaRoutes = require('./routes/localita');
+app.use('/api', localitaRoutes.router);
+
+
 
 // Root
 app.get('/', (req, res) => res.json({ message: 'RF4 Simulation Backend' }));
